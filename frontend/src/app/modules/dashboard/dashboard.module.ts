@@ -9,6 +9,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { DashboardComponent } from './dashboard.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ServicioComponent } from './servicio/servicio.component';
+import { NewServicioComponent } from './new-servicio/new-servicio.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServicioComponent } from './servicio/servicio.component';
     MenuListItemComponent,
     ClienteComponent,
     ServicioComponent,
+    NewServicioComponent,
   ],
   imports: [
     DashboardRoutingModule,
