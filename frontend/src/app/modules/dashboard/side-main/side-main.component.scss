@@ -253,9 +253,7 @@ hr {
 
 .content {
   height: calc(100vh - 98px);
-  display: flex;
-  font-size: 2rem;
-  color: lightgray;
+  display: grid;
 }
 
 mat-sidenav-container {

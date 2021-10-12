@@ -127,16 +127,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .container{
+    width: 93%;
     background-color: white;
     border-radius: 30px;
-    margin: 40px;
+
+    margin-top: 30px;
+    margin-bottom: 40px;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+   
   }
 
   .btnDelete{
     background-color: #ec5d39;
 
   }
+
+
+

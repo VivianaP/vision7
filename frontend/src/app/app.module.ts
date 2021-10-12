@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
+import { QrCodeModule } from 'ng-qrcode';
+import { NgQrScannerModule } from 'angular2-qrscanner';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     RouterModule,
     MaterialModule,
+    QrCodeModule,
+    NgQrScannerModule
     
   ],
   providers: [],

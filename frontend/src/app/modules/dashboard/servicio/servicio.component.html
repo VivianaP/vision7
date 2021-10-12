@@ -1,12 +1,18 @@
 <div class="container">
-    <h1>Servicio</h1>
-    <div class="row">
-        <div class="col-auto-6">
+    <h2>Servicio</h2>
+    <div class="row btn-agregar">
+        <div class="col-sm-12">
+            <a mat-raised-button color="primary" [routerLink]="['/new-servicio']" routerLinkActive="router-link-active">Agregar</a>
+        </div>
+    </div>
+
+    <div class="row servicios">
+        <div class="col-md-4 col-sm-12 ">
             <mat-card class="cardGeneral">
                 <mat-card-header>
                     <mat-card-title>Silla oficina</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                <img mat-card-image  class="imgServicio" src="https://hardzone.es/app/uploads-hardzone.es/2021/01/Silla-de-oficina.jpg?x=480&quality=20"
                     alt="Photo of a Shiba Inu">
                 <mat-card-actions>
                     <button mat-button>VER</button>
@@ -15,12 +21,25 @@
             </mat-card>
             
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-sm-12">
             <mat-card class="cardGeneral">
                 <mat-card-header>
                     <mat-card-title>Silla oficina</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                <img mat-card-image class="imgServicio2" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2020/07/silla-giratoria-oficina-reposacabezas-precio-derribo-amazon-2015429.jpg"
+                    alt="Photo of a Shiba Inu">
+                <mat-card-actions>
+                    <button mat-button>VER</button>
+                    <button mat-button>ELIMINAR</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-md-4  col-sm-12">
+            <mat-card class="cardGeneral">
+                <mat-card-header>
+                    <mat-card-title>Silla oficina</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="https://phantom-expansion.unidadeditorial.es/a0d4c7672a5ef73f8a5abf260490f1f7/resize/414/f/webp/assets/multimedia/imagenes/2020/05/06/15887993260388.jpg"
                     alt="Photo of a Shiba Inu">
                 <mat-card-actions>
                     <button mat-button>VER</button>
