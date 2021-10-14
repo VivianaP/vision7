@@ -32,7 +32,7 @@ const elementos : any = [
   MatFormFieldModule,
   MatSelectModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
 ];
 
 

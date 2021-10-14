@@ -7,12 +7,6 @@ import { MenuListItemComponent } from './side-main/ui/menu-list-item/menu-list-i
 import { SideMainComponent } from './side-main/side-main.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { DashboardComponent } from './dashboard.component';
-import { ClienteComponent } from './cliente/cliente.component';
-import { ServicioComponent } from './servicio/servicio.component';
-import { NewServicioComponent } from './new-servicio/new-servicio.component';
-import { NewClienteComponent } from './new-cliente/new-cliente.component';
-import { QrCodeModule } from 'ng-qrcode';
-import { NgQrScannerModule } from 'angular2-qrscanner';
 
 @NgModule({
   declarations: [
@@ -20,17 +14,14 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
     HomeComponent,
     SideMainComponent,
     MenuListItemComponent,
-    ClienteComponent,
-    ServicioComponent,
-    NewServicioComponent,
-    NewClienteComponent,
+
+    
   ],
   imports: [
     DashboardRoutingModule,
     CommonModule,
     MaterialModule,
-    QrCodeModule,
-    NgQrScannerModule
+
   ],
 
 })
