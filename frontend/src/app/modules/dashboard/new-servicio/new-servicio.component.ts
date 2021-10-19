@@ -52,9 +52,9 @@ export class NewServicioComponent implements OnInit {
 
 
   panelOpenState = false;
-  
+
   public webcamImage: any = null;
-  
+
   signaturePad: any;
   @ViewChild('canvas') canvasEl: any;
   signatureImg: any;
@@ -108,18 +108,18 @@ export class NewServicioComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(ModalCamaraComponent, {
-      
+
     });
   }
 
   ngOnInit(): void {
 
 }
-  
+
 
   ngAfterViewInit() {
       this.signaturePad = new SignaturePad(this.canvasEl.nativeElement);
-      
+
   }
 
   startDrawing(event: Event) {
@@ -140,6 +140,9 @@ export class NewServicioComponent implements OnInit {
     const base64Data = this.signaturePad.toDataURL();
     this.signatureImg = base64Data;
   }
-
+  onCodeResult(event: any) {
+    console.log('Codigo escaneado', event);
+    alert(event);
+  }
 
 }

@@ -17,6 +17,7 @@ import { WebcamModule } from 'ngx-webcam';
 import { ModalCamaraComponent } from './modal-camara/modal-camara.component';
 import { OperarioComponent } from './operario/operario.component';
 import { NewOperarioComponent } from './new-operario/new-operario.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -30,7 +31,7 @@ import { NewOperarioComponent } from './new-operario/new-operario.component';
     ModalCamaraComponent,
     OperarioComponent,
     NewOperarioComponent,
-    
+
   ],
   imports: [
     DashboardRoutingModule,
@@ -38,7 +39,8 @@ import { NewOperarioComponent } from './new-operario/new-operario.component';
     MaterialModule,
     QrCodeModule,
     NgQrScannerModule,
-    WebcamModule
+    WebcamModule,
+    ZXingScannerModule
   ],
 
 })

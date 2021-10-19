@@ -9,6 +9,7 @@ import { MaterialModule } from './material/material.module';
 import { QrCodeModule } from 'ng-qrcode';
 import { NgQrScannerModule } from 'angular2-qrscanner';
 import { WebcamModule } from 'ngx-webcam';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,8 @@ import { WebcamModule } from 'ngx-webcam';
     MaterialModule,
     QrCodeModule,
     NgQrScannerModule,
-    WebcamModule
-    
+    WebcamModule,
+    ZXingScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
