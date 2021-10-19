@@ -37,10 +37,13 @@ const elementos : any = [
   MatSelectModule,
   MatCheckboxModule,
   MatRadioModule,
+<<<<<<< HEAD
   MatExpansionModule,
   MatSlideToggleModule,
   MatNativeDateModule,
   MatDatepickerModule
+=======
+>>>>>>> 7f303339e8629f65bdc024e2d647877ac7fb133f
 ];
 
 

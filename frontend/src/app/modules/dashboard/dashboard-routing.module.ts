@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClienteComponent } from './cliente/cliente.component';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { NewClienteComponent } from './new-cliente/new-cliente.component';
 import { NewOperarioComponent } from './new-operario/new-operario.component';
 import { NewServicioComponent } from './new-servicio/new-servicio.component';
 import { OperarioComponent } from './operario/operario.component';
 import { ServicioComponent } from './servicio/servicio.component';
+=======
+
+>>>>>>> 7f303339e8629f65bdc024e2d647877ac7fb133f
 
 const routes: Routes = [
   {
@@ -17,6 +20,7 @@ const routes: Routes = [
       {
         path: '', component: HomeComponent,
       },
+<<<<<<< HEAD
       {
         path: 'cliente', component: ClienteComponent
       },
@@ -37,6 +41,8 @@ const routes: Routes = [
       },
     
     
+=======
+>>>>>>> 7f303339e8629f65bdc024e2d647877ac7fb133f
     ]
   }
 
