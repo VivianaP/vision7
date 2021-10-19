@@ -1,0 +1,18 @@
+
+<div mat-dialog-content>
+  <div style="text-align:center">
+    <div>
+        <webcam [height]="400" [width]="300" [trigger]="triggerObservable"
+            (imageCapture)="handleImage($event)"></webcam>
+        <br />
+        <button id="snapshotBtn" (click)="triggerSnapshot();">Capturar</button>
+    </div>
+
+</div>
+<br>
+<div class="snapshot" *ngIf="webcamImage" style="text-align:center">
+                            <img [src]="webcamImage.imageAsDataUrl" style="
+                        width: 70%;" />
+                        </div>
+</div>
+

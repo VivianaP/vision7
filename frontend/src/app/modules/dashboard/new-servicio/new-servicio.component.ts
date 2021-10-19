@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ElementRef, ViewChild } from '@angular/core';
+import SignaturePad from 'signature_pad';
+import { AfterContentInit } from '@angular/core';
+import { QrScannerComponent } from 'angular2-qrscanner';
+import {Observable, Subject} from 'rxjs';
+import { WebcamImage } from 'ngx-webcam';
+import { ModalCamaraComponent } from '../modal-camara/modal-camara.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 interface Mtto {
   value: string;
@@ -41,6 +50,17 @@ interface Pago {
 
 export class NewServicioComponent implements OnInit {
 
+
+  panelOpenState = false;
+  
+  public webcamImage: any = null;
+  
+  signaturePad: any;
+  @ViewChild('canvas') canvasEl: any;
+  signatureImg: any;
+
+  @ViewChild(QrScannerComponent, ) qrScannerComponent: any;
+
   mttos: Mtto[] = [
     {value: 'preventivo-0', viewValue: 'Preventivo'},
     {value: 'correctivo-1', viewValue: 'Correctivo'},
@@ -76,11 +96,50 @@ export class NewServicioComponent implements OnInit {
     {value: 'wompi-0', viewValue: 'Wompi'},
   ];
 
+  public handleImage(webcamImage: WebcamImage): void {
+    console.log('received webcam image', webcamImage);
+    this.webcamImage = webcamImage;
+  }
+
+
   public modo: any = "false";
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(ModalCamaraComponent, {
+      
+    });
+  }
 
   ngOnInit(): void {
+
+}
+  
+
+  ngAfterViewInit() {
+      this.signaturePad = new SignaturePad(this.canvasEl.nativeElement);
+      
   }
+
+  startDrawing(event: Event) {
+    console.log(event);
+    // works in device not in browser
+
+  }
+
+  moved(event: Event) {
+    // works in device not in browser
+  }
+
+  clearPad() {
+    this.signaturePad.clear();
+  }
+
+  savePad() {
+    const base64Data = this.signaturePad.toDataURL();
+    this.signatureImg = base64Data;
+  }
+
 
 }

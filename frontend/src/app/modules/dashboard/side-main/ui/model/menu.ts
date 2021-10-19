@@ -13,7 +13,12 @@ export let menu: NavItem[] = [
     },
     {
         displayName: 'Servicios',
-        iconName: 'info',
+        iconName: 'chair',
         route: './servicio'
+    },
+    {
+        displayName: 'Operarios',
+        iconName: 'people',
+        route: './operario'
     }
 ];

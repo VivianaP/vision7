@@ -16,6 +16,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const elementos : any = [
   MatSliderModule,
@@ -32,7 +36,11 @@ const elementos : any = [
   MatFormFieldModule,
   MatSelectModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
+  MatExpansionModule,
+  MatSlideToggleModule,
+  MatNativeDateModule,
+  MatDatepickerModule
 ];
 
 

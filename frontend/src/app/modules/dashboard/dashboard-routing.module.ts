@@ -4,7 +4,9 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NewClienteComponent } from './new-cliente/new-cliente.component';
+import { NewOperarioComponent } from './new-operario/new-operario.component';
 import { NewServicioComponent } from './new-servicio/new-servicio.component';
+import { OperarioComponent } from './operario/operario.component';
 import { ServicioComponent } from './servicio/servicio.component';
 
 const routes: Routes = [
@@ -27,6 +29,13 @@ const routes: Routes = [
       {
         path: 'new-cliente', component: NewClienteComponent
       },
+      {
+        path: 'operario', component: OperarioComponent
+      },
+      {
+        path: 'new-operario', component: NewOperarioComponent
+      },
+    
     
     ]
   }

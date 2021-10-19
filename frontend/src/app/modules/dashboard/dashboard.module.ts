@@ -13,7 +13,10 @@ import { NewServicioComponent } from './new-servicio/new-servicio.component';
 import { NewClienteComponent } from './new-cliente/new-cliente.component';
 import { QrCodeModule } from 'ng-qrcode';
 import { NgQrScannerModule } from 'angular2-qrscanner';
-
+import { WebcamModule } from 'ngx-webcam';
+import { ModalCamaraComponent } from './modal-camara/modal-camara.component';
+import { OperarioComponent } from './operario/operario.component';
+import { NewOperarioComponent } from './new-operario/new-operario.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -24,13 +27,18 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
     ServicioComponent,
     NewServicioComponent,
     NewClienteComponent,
+    ModalCamaraComponent,
+    OperarioComponent,
+    NewOperarioComponent,
+    
   ],
   imports: [
     DashboardRoutingModule,
     CommonModule,
     MaterialModule,
     QrCodeModule,
-    NgQrScannerModule
+    NgQrScannerModule,
+    WebcamModule
   ],
 
 })

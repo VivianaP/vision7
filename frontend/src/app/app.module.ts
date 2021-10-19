@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { QrCodeModule } from 'ng-qrcode';
 import { NgQrScannerModule } from 'angular2-qrscanner';
+import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
     RouterModule,
     MaterialModule,
     QrCodeModule,
-    NgQrScannerModule
+    NgQrScannerModule,
+    WebcamModule
     
   ],
   providers: [],

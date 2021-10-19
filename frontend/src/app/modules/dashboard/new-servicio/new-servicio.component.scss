@@ -11,7 +11,6 @@ mat-radio-button{
 }
 
 .container{
-    background-color: transparent;
     box-shadow: none;
     width: 97%;
 
@@ -20,4 +19,22 @@ mat-radio-button{
 mat-card {
     border-radius: 30px;
     padding: 20px;
+}
+
+canvas {
+    display: block;
+    border: 1px solid rgb(187, 178, 178);
+    background-color: var(--ion-color-success);
+}
+button {
+    margin: 10px;
+    margin-left: 10px;
+}
+
+.camara{
+    width: 30px;
+}
+
+canvas{
+    width: 100%;
 }
