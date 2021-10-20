@@ -56,8 +56,11 @@ export class NewServicioComponent implements OnInit {
   public webcamImage: any = null;
 
   signaturePad: any;
+  signaturePad2: any;
   @ViewChild('canvas') canvasEl: any;
+  @ViewChild('canvas2') canvasEl2: any;
   signatureImg: any;
+  signatureImg2: any;
 
   @ViewChild(QrScannerComponent, ) qrScannerComponent: any;
 
@@ -119,8 +122,10 @@ export class NewServicioComponent implements OnInit {
 
   ngAfterViewInit() {
       this.signaturePad = new SignaturePad(this.canvasEl.nativeElement);
-
+      this.signaturePad2 = new SignaturePad(this.canvasEl2.nativeElement);
   }
+
+
 
   startDrawing(event: Event) {
     console.log(event);
@@ -128,18 +133,33 @@ export class NewServicioComponent implements OnInit {
 
   }
 
+
+
   moved(event: Event) {
     // works in device not in browser
   }
 
+
+
   clearPad() {
     this.signaturePad.clear();
+  }
+
+  clearPad2() {
+    this.signaturePad2.clear();
   }
 
   savePad() {
     const base64Data = this.signaturePad.toDataURL();
     this.signatureImg = base64Data;
   }
+
+  savePad2() {
+    const base64Data = this.signaturePad2.toDataURL();
+    this.signatureImg2 = base64Data;
+  }
+
+
   onCodeResult(event: any) {
     console.log('Codigo escaneado', event);
     alert(event);

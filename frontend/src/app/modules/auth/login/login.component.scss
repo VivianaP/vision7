@@ -1,0 +1,43 @@
+
+.mat-form-field{
+    display: grid;
+}
+
+.rowBotones{
+    text-align: center;
+}
+
+@media  (min-width: 800px){
+.container{
+    margin: 0;
+    width: 500px;
+    margin-left: 30%;
+}
+}
+
+.rowGeneral{
+
+
+    padding-top: 20%;
+}
+
+
+
+h2{
+    text-align: center;
+}
+
+.container-fluid{
+    background-image:  linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("/assets/img/fondo.jpg");
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+    height: 100vh;
+    position: relative;
+    padding-top: 10%;
+}
+

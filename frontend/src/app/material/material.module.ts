@@ -26,7 +26,6 @@ const elementos : any = [
   MatButtonModule,
   MatMenuModule,
   MatToolbarModule,
-  MatIconModule,
   MatCardModule,
   MatSidenavModule,
   MatListModule,
@@ -40,7 +39,8 @@ const elementos : any = [
   MatExpansionModule,
   MatSlideToggleModule,
   MatNativeDateModule,
-  MatDatepickerModule
+  MatDatepickerModule,
+  MatIconModule
 ];
 
 

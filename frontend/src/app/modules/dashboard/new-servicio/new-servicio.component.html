@@ -242,14 +242,6 @@
               <div class="col-md-12 col-sm-12">
                 <form class="example-form">
                   <mat-form-field appearance="fill">
-                    <mat-label>Costo total</mat-label>
-                    <input matInput class="nameOpe">
-                  </mat-form-field>
-                </form>
-              </div>
-              <div class="col-md-12 col-sm-12">
-                <form class="example-form">
-                  <mat-form-field appearance="fill">
                     <mat-label>Saldo pendiente</mat-label>
                     <input matInput class="nameOpe">
                   </mat-form-field>
@@ -259,14 +251,6 @@
                 <form class="example-form">
                   <mat-form-field appearance="fill">
                     <mat-label>Descuento</mat-label>
-                    <input matInput class="nameOpe">
-                  </mat-form-field>
-                </form>
-              </div>
-              <div class="col-md-12 col-sm-12">
-                <form class="example-form">
-                  <mat-form-field appearance="fill">
-                    <mat-label>Responsable por parte del cliente</mat-label>
                     <input matInput class="nameOpe">
                   </mat-form-field>
                 </form>
@@ -293,17 +277,18 @@
                   <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
               </div>
-              <div class="col-md-12 col-sm-12">
-                <canvas #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
 
-                <button (click)="clearPad()">Limpiar</button>
-                <button color="secondary" (click)="savePad()">Guardar</button>
-                <img src='{{ signatureImg }}' />
+              <div class="col-md-12 col-sm-12">
+                <canvas #canvas2 (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+
+                <button (click)="clearPad2()">Limpiar</button>
+                <button color="secondary" (click)="savePad2()">Guardar</button>
+                <img src='{{ signatureImg2 }}' />
               </div>
+
               <div class="col-md-12 col-sm-12">
                 <button mat-raised-button color="primary">Guardar</button>
               </div>
-
 
             </div>
           </mat-card>
@@ -312,8 +297,6 @@
     </mat-expansion-panel>
   </mat-accordion>
 </div>
-
-
 
 
 

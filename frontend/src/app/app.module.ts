@@ -10,6 +10,7 @@ import { QrCodeModule } from 'ng-qrcode';
 import { NgQrScannerModule } from 'angular2-qrscanner';
 import { WebcamModule } from 'ngx-webcam';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     QrCodeModule,
     NgQrScannerModule,
     WebcamModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
