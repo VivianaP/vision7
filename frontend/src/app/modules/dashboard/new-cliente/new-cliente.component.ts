@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FactoryService } from 'src/app/services/factory.service';
 
 
 @Component({
@@ -8,16 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewClienteComponent implements OnInit {
   
+  cliente: any = {};
 
- 
-
-  constructor() { }
+  constructor(public factory: FactoryService, private router: Router) { }
 
   
 
   ngOnInit(): void {
   }
 
+  newCliente(){
+    if(!this.cliente.cedula || !this.cliente.nombre || !this.cliente.email
+      || !this.cliente.telefono ||  !this.cliente.direccion){
+      return alert("Llenar datos vacios");
+    }
+    console.log(this.cliente);
+
+    this.factory.post('cliente', this.cliente).subscribe(
+      (response: any) => {
+        console.log('Cliente creado',response);
+
+        this.cliente = {};
+        this.router.navigate(['auth/login']);
+      },
+      (error: any) => {
+        console.log(error);
+
+      }
+    );
+  }
   
 
 }

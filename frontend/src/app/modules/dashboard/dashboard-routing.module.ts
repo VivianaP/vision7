@@ -8,6 +8,7 @@ import { NewOperarioComponent } from './new-operario/new-operario.component';
 import { NewServicioComponent } from './new-servicio/new-servicio.component';
 import { OperarioComponent } from './operario/operario.component';
 import { ServicioComponent } from './servicio/servicio.component';
+import { TipoMttoComponent } from './tipo-mtto/tipo-mtto.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,9 @@ const routes: Routes = [
       },
       {
         path: 'new-operario', component: NewOperarioComponent
+      },
+      {
+        path: 'tipo-mtto', component: TipoMttoComponent
       },
     
     

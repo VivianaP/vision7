@@ -35,5 +35,6 @@ export class ModalCamaraComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
 

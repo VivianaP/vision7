@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Nuevo Servicio</h2>
+  <br>
   <mat-accordion>
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
       <mat-expansion-panel-header>
@@ -23,12 +24,7 @@
             </div>
             <div class="row">
               <div class="col-md-12 col-sm-12">
-                <a mat-raised-button color="primary">Leer código QR</a>
-                <!-- <qr-scanner [debug]="false" [canvasWidth]="1080" [canvasHeight]="720" [stopAfterScan]="true"
-                            [updateTime]="500">
-                        </qr-scanner> -->
-                <zxing-scanner
-                (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+                <a mat-raised-button color="primary" (click)="openDialog2()">Leer código QR</a>
               </div>
             </div>
             <br>
@@ -72,6 +68,11 @@
                 </mat-form-field>
               </div>
               <div class="col-md-12 col-sm-12">
+                <a mat-raised-button color="primary" [routerLink]="['/tipo-mtto']"
+                  routerLinkActive="router-link-active">Agregar tipo de mantenimiento</a>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <br>
                 <section class="example-section">
                   <mat-checkbox class="example-margin">Cambio de rodachinas</mat-checkbox>
                 </section>
@@ -175,10 +176,6 @@
                 </form>
               </div>
               <div class="col-md-12 col-sm-12">
-                <mat-label>Evidencia anticipo</mat-label>
-                <button mat-raised-button color="primary" (click)="openDialog()">Abrir cámara</button>
-              </div>
-              <div class="col-md-12 col-sm-12">
                 <mat-form-field appearance="fill">
                   <mat-label>Forma de pago</mat-label>
                   <mat-select>
@@ -188,17 +185,17 @@
                   </mat-select>
                 </mat-form-field>
               </div>
+              <div class="col-md-12 col-sm-12">
+                <mat-label>Evidencia anticipo</mat-label>
+                <button mat-raised-button color="primary" (click)="openDialog()">Abrir cámara</button>
+              </div>
 
               <div class="col-md-12 col-sm-12">
                 <canvas #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
 
-                <button (click)="clearPad()">Limpiar</button>
-                <button color="secondary" (click)="savePad()">Guardar</button>
+                <button (click)="clearPad()" mat-raised-button color="warn">Limpiar</button>
+                <button mat-raised-button color="accent" (click)="savePad()">Guardar</button>
                 <img src='{{ signatureImg }}' />
-              </div>
-
-              <div class="col-md-12 col-sm-12">
-                <button mat-raised-button color="primary">Guardar</button>
               </div>
 
             </div>
@@ -281,21 +278,24 @@
               <div class="col-md-12 col-sm-12">
                 <canvas #canvas2 (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
 
-                <button (click)="clearPad2()">Limpiar</button>
-                <button color="secondary" (click)="savePad2()">Guardar</button>
+                <button (click)="clearPad2()" mat-raised-button color="warn">Limpiar</button>
+                <button color="secondary" (click)="savePad2()" mat-raised-button color="accent">Guardar</button>
                 <img src='{{ signatureImg2 }}' />
               </div>
-
-              <div class="col-md-12 col-sm-12">
-                <button mat-raised-button color="primary">Guardar</button>
-              </div>
-
             </div>
           </mat-card>
         </div>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
+  <div class="row rowGuardar">
+    <div class="col-md-12 col-sm-12">
+      <br>
+      <button mat-raised-button color="primary">Guardar</button>
+    </div>
+  </div>
+
+
 </div>
 
 

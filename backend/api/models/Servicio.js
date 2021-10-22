@@ -87,6 +87,11 @@ module.exports = {
       required: true
     },
 
+    estado: {
+      type: 'string',
+      required: true
+    },
+
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗

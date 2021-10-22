@@ -18,6 +18,9 @@ import { ModalCamaraComponent } from './modal-camara/modal-camara.component';
 import { OperarioComponent } from './operario/operario.component';
 import { NewOperarioComponent } from './new-operario/new-operario.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { ModalCodigoComponent } from './modal-codigo/modal-codigo.component';
+import { TipoMttoComponent } from './tipo-mtto/tipo-mtto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -31,6 +34,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     ModalCamaraComponent,
     OperarioComponent,
     NewOperarioComponent,
+    ModalCodigoComponent,
+    TipoMttoComponent,
 
   ],
   imports: [
@@ -40,7 +45,9 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     QrCodeModule,
     NgQrScannerModule,
     WebcamModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 
 })

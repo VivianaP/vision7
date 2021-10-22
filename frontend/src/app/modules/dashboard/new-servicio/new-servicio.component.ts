@@ -7,6 +7,7 @@ import {Observable, Subject} from 'rxjs';
 import { WebcamImage } from 'ngx-webcam';
 import { ModalCamaraComponent } from '../modal-camara/modal-camara.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ModalCodigoComponent } from '../modal-codigo/modal-codigo.component';
 
 
 interface Mtto {
@@ -115,6 +116,12 @@ export class NewServicioComponent implements OnInit {
     });
   }
 
+  openDialog2() {
+    this.dialog.open(ModalCodigoComponent, {
+
+    });
+  }
+
   ngOnInit(): void {
 
 }
@@ -159,10 +166,5 @@ export class NewServicioComponent implements OnInit {
     this.signatureImg2 = base64Data;
   }
 
-
-  onCodeResult(event: any) {
-    console.log('Codigo escaneado', event);
-    alert(event);
-  }
 
 }

@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Tipo de mantenimiento</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <mat-form-field appearance="fill">
+                <mat-label>Tipo de mantenimiento</mat-label>
+                <mat-select [(ngModel)]="tipoMantenimiento.padre">
+                    <mat-option *ngFor="let tipoMtto of tiposMantenimientos" [value]="tipoMtto.id">
+                        {{tipoMtto.nombre}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 col-sm-12 colRadio">
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="tipoMantenimiento.tipoSelect" (change)="cargarSubtipo(tipoMantenimiento)">
+                <mat-radio-button  value="tipo">Tipo</mat-radio-button>
+                <mat-radio-button  value="subtipo" class="subtipo">Subtipo</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <br>
+            <mat-form-field appearance="fill" *ngIf="tipoMantenimiento.tipoSelect == 'subtipo'">
+                <mat-label>Tipo </mat-label>
+                <mat-select [(ngModel)]="tipoMantenimiento.nombre">
+                    <mat-option *ngFor="let tipoMtto of tipoMantenimiento.subTipos" [value]="tipoMtto.id">
+                        {{tipoMtto.nombre}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="tipoMantenimiento.nombre">
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 col-sm-12 btn-guardar">
+            <a mat-raised-button color="primary" (click)="newTipo()">Guardar</a>
+        </div>
+    </div>
+</div>
