@@ -22,22 +22,22 @@ export class TipoMttoComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarTipos();
-    
+
   }
 
   cargarTipos(){
     this.factory.get('tipoMantenimiento?padre=6172d40224252645c0a9dca3').subscribe(
       (response: any) => {
-        console.log('tipos',response);
         this.tiposMantenimientos = response;
-        /* this.tiposMantenimientos.forEach((tipo:any) => {
-          this.cargarSubtipo(tipo.id);
-        }); */      
+        this.tiposMantenimientos.forEach((tipo:any) => {
+          this.cargarSubtipo(tipo);
+        });
+        console.log('tipos', this.tiposMantenimientos);
       },
       (error: any) => {
         console.log(error);
       }
-      
+
     );
   }
 
@@ -46,18 +46,27 @@ export class TipoMttoComponent implements OnInit {
       (response: any) => {
         console.log('Subtipos',response);
         elemento.subTipo = response;
+        console.log('Subtipos', elemento);
       },
       (error: any) => {
         console.log(error);
       }
-      
+
     );
+  }
+
+  changeTipoPrin(evt: any): void {
+    console.log('change', evt);
   }
 
   newTipo(){
     if(!this.tipoMantenimiento.nombre){
       return alert("Llenar datos vacios");
     }
+    if(this.tipoMantenimiento.tipoSelect === 'tipo') {
+      this.tipoMantenimiento.padre = this.tiposMantenimientos[this.tipoMantenimiento.index].id;
+    }
+
     console.log(this.tipoMantenimiento);
 
     this.factory.post('tipoMantenimiento', this.tipoMantenimiento).subscribe(

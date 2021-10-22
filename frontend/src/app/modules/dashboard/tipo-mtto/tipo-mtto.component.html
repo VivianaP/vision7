@@ -5,8 +5,10 @@
         <div class="col-md-12 col-sm-12">
             <mat-form-field appearance="fill">
                 <mat-label>Tipo de mantenimiento</mat-label>
-                <mat-select [(ngModel)]="tipoMantenimiento.padre">
-                    <mat-option *ngFor="let tipoMtto of tiposMantenimientos" [value]="tipoMtto.id">
+                <mat-select
+                [(ngModel)]="tipoMantenimiento.index"
+                (change)="cargarSubtipo(tipoMantenimiento)">
+                    <mat-option *ngFor="let tipoMtto of tiposMantenimientos; index as i" [value]="i">
                         {{tipoMtto.nombre}}
                     </mat-option>
                 </mat-select>
@@ -22,8 +24,10 @@
             <br>
             <mat-form-field appearance="fill" *ngIf="tipoMantenimiento.tipoSelect == 'subtipo'">
                 <mat-label>Tipo </mat-label>
-                <mat-select [(ngModel)]="tipoMantenimiento.nombre">
-                    <mat-option *ngFor="let tipoMtto of tipoMantenimiento.subTipos" [value]="tipoMtto.id">
+                <mat-select [(ngModel)]="tipoMantenimiento.padre">
+                    <mat-option
+                    *ngFor="let tipoMtto of tiposMantenimientos[tipoMantenimiento.index].subTipo"
+                    [value]="tipoMtto.id">
                         {{tipoMtto.nombre}}
                     </mat-option>
                 </mat-select>
